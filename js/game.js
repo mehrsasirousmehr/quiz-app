@@ -37,4 +37,19 @@ const showQuestion = () => {
     });
 };
 
+// ckecking whether the question is correct or incorrect
+const ckeckAnswer = (event, index) => {
+    const isCorrect = index === correctAnswer ? true : false;
+    if (isCorrect) {
+        event.target.classList.add("correct");
+    } else {
+        event.target.classList.add("incorrect");
+        answerList[correctAnswer].classList.add("correct");
+    }
+};
+
 window.addEventListener("load", fetchData);
+
+answerList.forEach((button, index) => {
+    button.addEventListener("click", (event) => ckeckAnswer(event, index));
+});

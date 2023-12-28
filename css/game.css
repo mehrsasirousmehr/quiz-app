@@ -24,7 +24,6 @@
     width: 700px;
 }
 
-
 /* header */
 .header {
     display: flex;
@@ -104,4 +103,19 @@ h3 {
 #next-button:hover {
     background-color: #6757d9;
     color: #fff;
+}
+
+/* color of answers */
+.incorrect {
+    background-color: #fe6681;
+}
+.incorrect:hover {
+    background-color: #fe6681;
+}
+
+.correct {
+    background-color: #5db7bc;
+}
+.correct:hover {
+    background-color: #5db7bc;
 }
