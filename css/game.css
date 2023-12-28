@@ -1,0 +1,107 @@
+/* loader */
+#loader {
+    width: 100px;
+    height: 100px;
+    border: 7px solid #6757d9;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#container {
+    display: block;
+    width: 700px;
+}
+
+
+/* header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+}
+
+.header p {
+    color: #6757d9;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.header span {
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 27px;
+    color: #6757d9;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+/* question box */
+#question-box {
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    background-color: #6557d9;
+    color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 60px 0 30px;
+}
+
+.answer-text {
+    background-color: #fff;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    text-align: left;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.answer-text:hover {
+    background-color: #eeedfb;
+    border: 2px solid #fff;
+}
+
+#finish-button,
+#next-button {
+    background-color: #eeedfb;
+    color: #6757d9;
+    font-size: 1rem;
+    border: 2px solid #6757d9;
+    padding: 8px 15px;
+    margin: 20px 20px 0 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+#finish-button:hover,
+#next-button:hover {
+    background-color: #6757d9;
+    color: #fff;
+}
