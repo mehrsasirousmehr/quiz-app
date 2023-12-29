@@ -2,6 +2,7 @@ const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 const list = document.querySelector("ol");
 
+// show highest scores
 const content = highScores.map((score, index) => {
     return `
         <li>
