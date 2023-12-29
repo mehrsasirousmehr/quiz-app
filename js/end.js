@@ -18,7 +18,7 @@ const saveHandler = () => {
             score,
         };
         highScores.push(finalScore);
-        highScores.sort((a, b) => b.scores - a.scores); // sort from high to low
+        highScores.sort((a, b) => b.score - a.score); // sort from high to low
         highScores.splice(10); // show just 10 of high scores
         localStorage.setItem("highScores", JSON.stringify(highScores));
         localStorage.removeItem("scores");
