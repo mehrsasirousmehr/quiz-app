@@ -6,6 +6,7 @@ const questionText = document.getElementById("question-text");
 const answerList = document.querySelectorAll(".answer-text");
 const scoreText = document.getElementById("score");
 const nextButton = document.getElementById("next-button");
+const finishButton = document.getElementById("finish-button");
 const questionNumber = document.getElementById("question-number");
 
 const CORRECT_BONUS = 10;
@@ -70,12 +71,18 @@ const nextHandler = () => {
         removeClasses();
         showQuestion();
     } else {
-        window.location.assign("/end.html");
+        finishHandler();
     }
 };
 
 const removeClasses = () => {
     answerList.forEach((button) => (button.className = "answer-text"));
+};
+
+// finish game
+const finishHandler = () => {
+    localStorage.setItem("score", JSON.stringify(score));
+    window.location.assign("/end.html");
 };
 
 window.addEventListener("load", fetchData);
@@ -85,3 +92,4 @@ answerList.forEach((button, index) => {
 });
 
 nextButton.addEventListener("click", nextHandler);
+finishButton.addEventListener("click", finishHandler);
